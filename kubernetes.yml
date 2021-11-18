@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: papaya-paymentservice-be
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: papaya-paymentservice-be
+  template:
+    metadata:
+      labels:
+        app: papaya-paymentservice-be
+    spec:
+      containers:
+        - image: l1n77/papaya-paymentservice-be
+          imagePullPolicy: Always
+          name: papaya-paymentservice-be
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: papaya-paymentservice-be
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP
+  ports:
+    - name: "papaya-paymentservice-be"
+      port: 8080
+  selector:
+    app: papaya-paymentservice-be
