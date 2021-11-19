@@ -19,7 +19,12 @@ jobs:
       - name: okteto namespace
         uses: okteto/namespace@latest
         with:
-          name: liimootbm
+          namespace: liimootbm
+
+      - name: destroy old pipeline
+        uses: okteto/destroy-pipeline@latest
+        with:
+          name: papaya-paymentservice-be
 
       - name: okteto pipeline
         uses: okteto/pipeline@latest
