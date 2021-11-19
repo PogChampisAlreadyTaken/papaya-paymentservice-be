@@ -21,7 +21,7 @@ public class PaymentserviceTest {
                 .when().get("/hello")
                 .then()
                 .statusCode(200)
-                .body(is(jsonb.toJson("Hello Mealmanager, UWUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")));
+                .body(is(jsonb.toJson("Hello Paymentservice, °w°")));
     }
 
 
