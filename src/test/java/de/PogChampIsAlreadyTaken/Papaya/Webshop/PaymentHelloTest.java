@@ -11,7 +11,6 @@ import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 public class PaymentserviceTest {
-
     @Test
     public void testHelloEndpoint() {
         Jsonb jsonb = JsonbBuilder.create();
