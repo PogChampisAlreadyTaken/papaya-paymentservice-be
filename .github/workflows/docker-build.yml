@@ -33,4 +33,4 @@ jobs:
           context: ./
           file: ./Dockerfile.jvm
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/papaya-paymentservice-be:latest
+          tags: ${{ secrets.DOCKER_USER }}/papaya-usermanagement-be:latest
